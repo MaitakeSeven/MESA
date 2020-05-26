@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MESA</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <% #stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+  </head>
+<style>
+  body{
+    background: linear-gradient( 0deg, rgba(246, 255, 255, 1), rgba(255,255,255,0.6), rgba(255,255,255,0.2), rgba(255,255,255,0)),
+    url(/assets/back01.png)fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    max-width:2000px;
+    height:100%;
+      }
+  .logo-box{text-align: center;
+            margin-top:80px;
+            margin-bottom:80px;
+  }
+  .logo{ width: 15%;
+  }
+  .L-bar{background-color:#0000000;
+          height:800px;
+          margin-left:30%;
+
+          }
+  .R-bar{background-color:#0000000;
+          height:800px;
+          margin-right:15%;
+
+          }
+  .center-box{background-color:#292f33;
+
+              margin-right:8%;
+              margin-left:8%;
+              height:100%;
+          
+  }
+  .footer{height:120px;
+          background-color:gray;
+  }
+  .mesa-nav{height:100px;}
+  .icon{height:50px;}
+  .mesa-slide{margin-left:50px;margin-right:50px;padding-top:20px;}
+</style>
+  <body>
+    
+  <header>
+    <%= render"layouts/navber" %>
+  </header>
+  
+    <div class="logo-box">
+      <img src="/assets/emblem2.png" class="logo">
+    </div>
+    
+    <div class="container-fluid background">
+        <div class="row">
+    
+            
+            <div class="col-sm-9">
+              <%= yield %>
+            </div>
+          
+            <div class="col-sm-3 R">
+              <div class="R-bar">
+                <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/Maitake_Ninja?ref_src=twsrc%5Etfw" height=100%>
+                  Tweets by Maitake_Ninja
+                </a> 
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+              </div>
+            </div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+      
+    </footer>
+  </body>
+</html>
